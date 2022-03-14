@@ -7,7 +7,7 @@ export class MongoConnection {
       await mongoose.connect(config.Mongo_Connection, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
-      });
+      });      
       console.log("Mongo database connected");
     } catch (err) {
       console.error("Erro:" + err.message);

@@ -1,4 +1,4 @@
 export const config = {
-  Api_Url: "http://localhost:5000",
+  Api_Url: "https://httpshortner.herokuapp.com",
   Mongo_Connection:process.env.Mongo_Connection,
 };

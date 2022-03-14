@@ -1,6 +1,6 @@
 import Express from 'express'
-import { Routes } from './routes/Routes'
-import { MongoConnection } from './microservices/apiConnection'
+import { Routes } from './src/routes/Routes'
+import { MongoConnection } from './src/microservices/apiConnection'
 
 const port = process.env.PORT || 5000;
 

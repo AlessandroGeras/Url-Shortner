@@ -1,5 +1,5 @@
 import Express from 'express'
-import { URLController } from './controller/URLController'
+import { Routes } from './routes/Routes'
 import { MongoConnection } from './microservices/apiConnection'
 
 const port = process.env.PORT || 5000;
@@ -18,7 +18,7 @@ express_server.get("/",function(req,res){
 const database = new MongoConnection()
 database.connect()
 
-const urlController = new URLController()
+const urlController = new Routes()
 express_server.post('/fullurl', urlController.fullurl)
 express_server.get('/:hash', urlController.redirect)
 

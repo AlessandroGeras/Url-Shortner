@@ -3,7 +3,7 @@ import shortId from 'shortid'
 import { config } from '../microservices/apiConfig'
 import { URLModel } from '../model/URL'
 
-export class URLController {
+export class Routes {
 	public async fullurl(req: Request, response: Response): Promise<void> {
 		const { originURL } = req.body
 		const url = await URLModel.findOne({ originURL })

@@ -1,6 +1,6 @@
 import Express from 'express'
-import { Routes } from './src/routes/Routes'
-import { MongoConnection } from './src/microservices/apiConnection'
+import { Routes } from './routes/Routes'
+import { MongoConnection } from './microservices/apiConnection'
 
 const port = process.env.PORT || 5000;
 
@@ -15,7 +15,7 @@ express_server.get("/",function(req,res){
 
 /*Sempre usar Content-Type: application/json no Insomnia ao enviar dados no body em json*/
 
-const database = new MongoConnection()
+const database = new MongoConnection() 
 database.connect()
 
 const urlController = new Routes()
